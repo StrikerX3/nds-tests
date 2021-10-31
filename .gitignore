@@ -1,0 +1,7 @@
+# Build files
+build/
+*.elf
+*.nds
+
+# VS Code settings
+.vscode/
