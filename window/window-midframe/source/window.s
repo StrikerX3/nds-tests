@@ -138,12 +138,13 @@ main:
 
     //memcpy red into vram :P
     mov r0, #0x06000000
-    mov r1, #0
+    mov r1, #0x8000
     ldr r2, =#0x06018000
 
 vram_loop:
     strh r1, [r0]
     add r1, #10
+    orr r1, #0x8000
     add r0, #2
     cmp r2, r0
     bne vram_loop
