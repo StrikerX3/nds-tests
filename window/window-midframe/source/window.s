@@ -51,9 +51,11 @@ wait_line:
     strh r1, [r0]
 
     // halt
-    swi #0x060000
+    mov r0, #1
+    mov r1, #4
+    swi #0x040000
     ldr r0, =#0x04000214
-    mov r1, #0xffffffff
+    mov r1, #4
     strh r1, [r0]
 
 
@@ -63,9 +65,11 @@ wait_line:
     strh r1, [r0]
 
     // halt
-    swi #0x060000
+    mov r0, #1
+    mov r1, #2
+    swi #0x040000
     ldr r0, =#0x04000214
-    mov r1, #0xffffffff
+    mov r1, #2
     strh r1, [r0]
 
     pop {r0-r1}
